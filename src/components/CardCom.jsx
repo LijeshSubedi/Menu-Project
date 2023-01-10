@@ -9,7 +9,8 @@ const CardCom = (props) => {
   console.log(props);
   return (
     <>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card  sx={{ maxWidth: 345 ,
+      margin:"10px"}}>
         <CardActionArea>
           <CardMedia
             component="img"

@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import React , {useEffect,useState} from "react";
 import CardCom from "../components/CardCom";
 
@@ -16,14 +15,14 @@ const MenuPage = () => {
   }, []);
 
   return(
-    <Box m={2} pt={3} >
-    <div>
+    <div className="container">
   {
     
     menu.map((item)=>{
         return(
           
             <CardCom 
+            
             imgurl={item.foto}
             price={item.harga}
             name={item.nama}
@@ -33,7 +32,7 @@ const MenuPage = () => {
     })
   }
   </div>
-  </Box>
+  
   );
 };
 
