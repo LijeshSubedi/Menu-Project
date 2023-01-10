@@ -9,12 +9,14 @@ import SignUpPage from './pages/SignUpPage';
 import SignInPage from './pages/SignInPage';
 import CardCom from './components/CardCom';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 function App() {
   
   return (
     
     <>
+    <Navbar/>
     <Routes>
 
       <Route path='/CardCom' element={<CardCom />}/>
