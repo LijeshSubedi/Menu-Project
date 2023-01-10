@@ -1,12 +1,11 @@
 import React from "react";
 
-const Card = () => {
+const Navbar = () => {
   return (
     <>
     
     </>
-  )
-
+  );
 };
 
-export default Card;
+export default Navbar;

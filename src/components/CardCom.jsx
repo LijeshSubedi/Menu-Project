@@ -10,11 +10,11 @@ const CardCom = (props) => {
   return (
     <>
       <Card  sx={{ maxWidth: 345 ,
-      margin:"10px"}}>
+      margin  :"10px"}}>
         <CardActionArea>
           <CardMedia
             component="img"
-            height="150"
+            height="250"
             image={props.imgurl}
             alt="green iguana"
           />
@@ -26,7 +26,7 @@ const CardCom = (props) => {
             {props.detail}
             </Typography>
             <Typography gutterBottom variant="h5" component="div">
-            {props.price}
+            Rs. {props.price}
             </Typography>
 
           </CardContent>

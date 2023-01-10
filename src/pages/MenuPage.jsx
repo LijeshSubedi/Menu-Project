@@ -15,8 +15,10 @@ const MenuPage = () => {
   }, []);
 
   return(
+      
     <div className="container">
   {
+    
     
     menu.map((item)=>{
         return(

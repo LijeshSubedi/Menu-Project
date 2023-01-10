@@ -1,0 +1,38 @@
+.header {
+    background: radial-gradient(#fff, #444);
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .col {
+    flex-basis: 50%;
+    min-width: 300px;
+  
+    h1 {
+      font-family: "Dancing Script", cursive;
+      font-size: 70px;
+      transition: all 2s;
+      &:hover {
+      }
+    }
+    p {
+      font-size: 30px;
+      font-family: "Poppins", sans-serif;
+      transition: all 1s;
+  
+      &:hover {
+      }
+    }
+    img {
+      max-width: 100%;
+      max-height: 70vh;
+      padding: 50px 0;
+      transition: all 2s;
+      &:hover {
+      }
+    }
+  }
+  

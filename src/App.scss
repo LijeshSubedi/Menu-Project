@@ -1,7 +1,12 @@
-.container{
-    box-sizing: border-box;
-    margin: 20px;
-    padding:30px;
-    display:grid;
-   grid-template-columns: repeat(2,auto); 
+@import './styles/pages/MenuPage.scss';
+@import './styles/pages/Home.scss';
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: content-box;
+
+}
+#root{
+  background-color: #ebeee9;
 }
