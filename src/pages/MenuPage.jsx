@@ -1,74 +1,39 @@
-import { Box, Grid } from "@mui/material";
-import React from "react";
-import CartPage from "./CartPage";
+import { Box } from "@mui/material";
+import React , {useEffect,useState} from "react";
+import CardCom from "../components/CardCom";
+
 
 const MenuPage = () => {
-  return (
-    <>
-    <Box m={2} pt={3}>
-      <Grid
-        container
-        spacing={2}
-        direction="row"
-        justify="flex-start"
-        alignItems="flex-start"
-      >
-        <Grid item xs={3}>
-          <CartPage />
-        </Grid>
-        <Grid item xs={3}>
-          <CartPage />
-        </Grid>
-        <Grid item xs={3}>
-          <CartPage />
-        </Grid>
-        <Grid item xs={3}>
-          <CartPage />
-        </Grid>
-      </Grid>
-      <Grid
-        container
-        spacing={2}
-        direction="row"
-        justify="flex-start"
-        alignItems="flex-start"
-      >
-        <Grid item xs={3}>
-          <CartPage />
-        </Grid>
-        <Grid item xs={3}>
-          <CartPage />
-        </Grid>
-        <Grid item xs={3}>
-          <CartPage />
-        </Grid>
-        <Grid item xs={3}>
-          <CartPage />
-        </Grid>
-      </Grid>
-      <Grid
-        container
-        spacing={2}
-        direction="row"
-        justify="flex-start"
-        alignItems="flex-start"
-      >
-        <Grid item xs={3}>
-          <CartPage />
-        </Grid>
-        <Grid item xs={3}>
-          <CartPage />
-        </Grid>
-        <Grid item xs={3}>
-          <CartPage />
-        </Grid>
-        <Grid item xs={3}>
-          <CartPage />
-        </Grid>
-      </Grid>
-      </Box>
-    </>
+  const [menu, setMenu] = useState([]);
 
+  useEffect(() => {
+    fetch(`https://foodmenu-api.herokuapp.com/api/menu`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setMenu(data)
+      });
+  }, []);
+
+  return(
+    <Box m={2} pt={3} >
+    <div>
+  {
+    
+    menu.map((item)=>{
+        return(
+          
+            <CardCom 
+            imgurl={item.foto}
+            price={item.harga}
+            name={item.nama}
+            detail={item.detail}
+            />
+        )
+    })
+  }
+  </div>
+  </Box>
   );
 };
 
