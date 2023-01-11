@@ -1,0 +1,12 @@
+.row_about {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    .col {
+        padding: 30px;
+        flex-basis: 30%;
+        min-width: 300px;
+      
+      }
+ }

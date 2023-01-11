@@ -21,7 +21,7 @@ function Copyright() {
 const Footer = () => {
   return (
     <>
-    <Box textAlign="center" sx={{color:"#e1dfdf", bgcolor:"#353535"}}>
+    <Box textAlign="center" sx={{color:"#e1dfdf", bgcolor:"#224"}}>
     <Box
       sx={{
         display: 'flex',

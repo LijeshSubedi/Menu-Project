@@ -20,11 +20,11 @@ const MenuPage = () => {
   {
     
     
-    menu.map((item)=>{
+    menu.map((item,index)=>{
         return(
           
             <CardCom 
-            
+           key={index} 
             imgurl={item.foto}
             price={item.harga}
             name={item.nama}

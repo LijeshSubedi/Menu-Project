@@ -1,13 +1,25 @@
+
 .navbar {
   display: flex;
-  position: absolute;
+  position: relative;
+  top: 0px;
   padding: 10px 13px;
   height:50px;
   align-items: center;
-  background-color: rgba(aliceblue,0.1);
+  background-color: rgba(#fff,0.9);
+  z-index: 1;
   justify-content: end;
-  width:100%;
+  width:98%;
 }
+
+.nav-logo{
+flex-basis: 10%;
+max-height: 70px;
+position:absolute;
+left: 20px;
+top:10px;
+}
+
 .nav-links {
   text-decoration: none;
   text-align: center;
