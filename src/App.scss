@@ -1,0 +1,21 @@
+@import './styles/pages/MenuPage.scss';
+@import './styles/pages/Home.scss';
+@import './styles/components/Navbar.scss';
+@import './styles/components/ModalComp.scss';
+
+@import './styles/pages/SignUpPage.scss';
+@import './styles/pages/AboutDeveloperPage.scss';
+
+
+
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: content-box ;
+
+}
+#root{
+  background: linear-gradient(#fff, #224); ;
+}
