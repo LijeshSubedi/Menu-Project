@@ -34,7 +34,7 @@ export const MenuProvider = ({ children }) => {
   const updatePrice = (item) => {
     let total = 0;
     item.forEach((element) => {
-      total += element.price;
+      total += element.price*element.qty;
     });
     dispatch({
       type: "UPDATE_PRICE",

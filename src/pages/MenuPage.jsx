@@ -1,18 +1,21 @@
 import React , {useEffect,useState} from "react";
 import CardCom from "../components/CardCom";
+import {data} from "./DataPage"
 
 
 const MenuPage = () => {
   const [menu, setMenu] = useState([]);
 
   useEffect(() => {
-    fetch(`https://foodmenu-api.herokuapp.com/api/menu`)
-      .then((res) => res.json())
-      .then((data) => {
+    // fetch(`https://foodmenu-api.herokuapp.com/api/menu`)
+    //   .then((res) => res.json())
+    //   .then((data) => {
         console.log(data);
         setMenu(data)
-      });
+      // });
   }, []);
+  // setMenu(data)
+  console.log(data)
 
   return(
       
@@ -25,9 +28,9 @@ const MenuPage = () => {
           
             <CardCom 
            key={index} 
-            imgurl={item.foto}
-            price={item.harga}
-            name={item.nama}
+            imgurl={item.imgurl}
+            price={item.Price}
+            name={item.name}
             detail={item.detail}
             />
         )

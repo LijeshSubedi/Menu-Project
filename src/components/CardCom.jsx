@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
+import Box from "@mui/material/Box";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions, Divider } from "@mui/material";
 import useMenu from "../files/MenuContext";
+// import ModalPage from "./ModalPage";
 
 const CardCom = ({ name, imgurl, price, detail }) => {
   const { items, addToCart, removeFromCart } = useMenu();
   const [isInCart, setIsInCart] = useState(false);
+  const [quantity,setQty]=useState(1)
 
   useEffect(() => {
     const itemIsInCart = items.find((item) => item.name === name);
@@ -17,15 +20,17 @@ const CardCom = ({ name, imgurl, price, detail }) => {
     } else {
       setIsInCart(false);
     }
-  }, [items, name]);
+  }, [items, name ]);
   const handleClick = () => {
-    const item = { name, imgurl, price };
+    const qty=quantity
+    const item = { name, imgurl, price,qty};
 
     if (isInCart) {
       removeFromCart(item);
     } else {
       addToCart(item);
     }
+    
   };
 
   return (
@@ -47,6 +52,15 @@ const CardCom = ({ name, imgurl, price, detail }) => {
             <Typography gutterBottom variant="h5" component="div">
               Rs. {price}
             </Typography>
+            
+              <Box>
+              <Button variant="outlined" sx={{color:"white"}}  onClick={()=>setQty(quantity>0 && quantity+1)}>+</Button>
+              <Typography variant="h6" component="div">
+              Qty: {quantity}
+              </Typography>
+              
+              <Button variant="outlined" sx={{color:"white"}} onClick={()=>setQty(quantity>1 ? quantity-1:1)}>-</Button>
+              </Box>
           </CardContent>
         </CardActionArea>
         <Divider />
@@ -59,12 +73,13 @@ const CardCom = ({ name, imgurl, price, detail }) => {
           }
         >
           <Button
-            onClick={handleClick}
+          onClick={handleClick}
             size="small"
             color="primary"
             style={{ backgroundColor: "rgba(#446,0.7)", color: "#eee" }}
           >
-            order
+            {/* <ModalPage /> */}
+           order 
           </Button>
         </CardActions>
       </Card>
