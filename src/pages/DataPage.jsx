@@ -66,7 +66,7 @@ export const data = [
         detail: "Mexican",
         Price: 460,
         category: "Momo",
-        imgurl:"https://www.eastcoastdaily.in/wp-content/uploads/2020/12/dhokla_620x330_61513323467.jpg"
+        imgurl:"https://www.thespruceeats.com/thmb/xBQBneVqWIac9DB40IwhNyhTKRc=/2812x1869/filters:fill(auto,1)/Pepperonipizzahoriz-3d53b00a7cce429eae3bfb629df356ec.jpg"
       },
     //   _______________________________________________soup________________________________________________________________________________
       {

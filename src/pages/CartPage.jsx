@@ -1,6 +1,7 @@
 import React from "react";
 import useMenu from "../files/MenuContext";
 import CardCom from "../components/CardCom";
+import Khalti from "../Khalti/Khalti";
 
 const CartPage = () => {
   const { total, items } = useMenu();
@@ -23,7 +24,10 @@ const CartPage = () => {
             );
           })}
         </div>
+
       </>
+      <Khalti price={total}/>
+
     </div>
   );
 };
